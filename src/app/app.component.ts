@@ -20,7 +20,11 @@ export class AppComponent {
     ),
   ];
   applicationName = 'ProTrav';
-  internalRoutes = [new InternalRoute('Home', '')];
+  internalRoutes = [
+    new InternalRoute('Home', ''),
+    new InternalRoute('Training', 'training'),
+    new InternalRoute('Policies', 'policies'),
+  ];
   headerUser: HeaderUser = {
     userName: 'abc',
     originalUserName: 'changhxu',
