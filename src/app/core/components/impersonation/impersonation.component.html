@@ -1,0 +1,31 @@
+<section class="container mt-2">
+  <div class="alert alert-warning my-2" role="alert">
+    <p class="alert-heading" class="fw-bold">Warning</p>
+    <p>Please logout or stop impersonation after you finish testing.</p>
+  </div>
+
+  @if(userService.user$ | async; as user){ @if(user.originalUser){
+  <button
+    type="button"
+    class="btn btn-primary mb-2"
+    (click)="stopImpersonate()"
+  >
+    Stop Impersonate
+  </button>
+  }@else {
+  <form class="form-inline" (ngSubmit)="impersonate()">
+    <div class="mb-2">
+      <label for="hawkid" class="visually-hidden">HawkID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="hawkid"
+        name="hawkId"
+        placeholder="user HawkID"
+        [(ngModel)]="hawkId"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Impersonate</button>
+  </form>
+  } }
+</section>

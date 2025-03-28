@@ -1,0 +1,26 @@
+<div class="container">
+  <h2 class="text-danger my-4">Access Denied.</h2>
+
+  <div class="my-5" *ngIf="userService.user$ | async as user; else notLoggedIn">
+    <div class="alert alert-info" role="alert">
+      <p class="alert-heading" style="font-weight: 500">
+        Hello, {{ user.hawkId }},
+      </p>
+      <p>
+        Your account doesn't have enough permission to view protected content in
+        this website.
+      </p>
+    </div>
+    <button class="btn btn-primary" (click)="logout()">Logout</button>
+  </div>
+  <ng-template class="my-5" #notLoggedIn>
+    <div class="alert alert-danger" role="alert">
+      <p class="alert-heading" style="font-weight: 500">Hello,</p>
+      <p>
+        You haven't logged in our system or your account doesn't have enough
+        permission.
+      </p>
+    </div>
+    <button class="btn btn-primary" (click)="login()">HawkID Login</button>
+  </ng-template>
+</div>

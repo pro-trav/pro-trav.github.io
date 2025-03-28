@@ -1,0 +1,14 @@
+<uiowa-header
+  [externalLinks]="externalLinks"
+  [applicationName]="applicationName"
+  [internalRoutes]="internalRoutes"
+  [user]="headerUser"
+  (stopImpersonation)="stopImpersonation()"
+/>
+<main role="main" class="w-100 h-100 flex-fill p-0 overflow-auto">
+  <router-outlet></router-outlet>
+</main>
+<footer role="contentinfo">
+  <app-footer />
+</footer>
+<app-toasts aria-live="polite" aria-atomic="true" />
