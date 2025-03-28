@@ -19,7 +19,7 @@
     "@angular/router": "^19.2.0",
     "@ng-bootstrap/ng-bootstrap": "^18.0.0",
     "@popperjs/core": "^2.11.8",
-    "@uiowa/uiowa-header": "^19.0.0",
+    "@uiowa/uiowa-header": "19.0.1-protrav2",
     "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
     "session-expiration-alert": "^13.1.0",
